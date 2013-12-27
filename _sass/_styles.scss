@@ -22,14 +22,24 @@ html {
 body {
   min-height: 100%;
   font-family: $serif;
+  font-size: $font-size-4;
 }
 
 a {
   text-decoration: none;
+  @include transit(color, .2s, ease-in-out);
   &:hover {
     color: lighten($link, 10%);
+    @include transit(color, .2s, ease-in-out);
   }
 }
+
+small {
+  font-size: $font-size-6;
+  text-transform: uppercase;
+}
+
+/* Basic Structure Classes */
 
 .page-wrap {
   width: 100%;
@@ -43,7 +53,7 @@ a {
 }
 
 .push {
-  height: $footerHeight;
+  height: $footerHeight/2;
 }
 
 article {
@@ -52,10 +62,13 @@ article {
   float: none;
   display:block;
   max-width: 760px;
-  min-height: 600px;
-  margin-bottom: 72px;
+  min-height: 1px;
   display: block;
   @include clearfix();
+
+  @include breakpoint(phone) {
+    font-size: $font-size-5;
+  }
 }
 
 .wrap {
@@ -66,12 +79,22 @@ article {
     margin: 0 auto;
     @include clearfix;
     overflow: hidden;
+
+    @include breakpoint(phone) {
+      @include column(9);
+      display: block;
+      float: none;
+      margin: 0 auto;
+      @include clearfix;
+      overflow: hidden;
+    }
 }
 
 footer {
   height: $footerHeight;
   background: darken($bg, 5%);
   display: block;
+  position: relative;
 }
 
 /*
@@ -203,24 +226,64 @@ header.site-header nav {
   }
 }
 
+.homepage {
+  ul {
+    margin: 32px auto;
+    float: none;
+    font-size: $font-size-5;
+    color: $off-black;
+    font-family: $sans;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 1.5em;
+    padding: 1.5em;
+    list-style-type: none;
+    list-style: none;
+    background: white;
+    border-radius: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.02);
+    max-width: 400px;
+
+    li {
+      opacity: .4;
+      padding: .5em;
+      max-width: 400px;
+    }
+
+    @include breakpoint(phone) {
+      font-size: font-size-6;
+      padding: .75em;
+    }
+  }
+}
+
 /*
-Form
+        Form
 */
 
 footer {
   padding-top: 50px;
   font-family: $sans;
   background: $visited;
+  
+  // paragraph
+  p {
+    font-size: $font-size-5;
+    color: white;
+  }
+  // h4 tag
   h4 {
     color: white ;
   }
+
+  // Inputs and Forms
   input, textarea {
     font-size: $font-size-5;
     letter-spacing: 1px;
     border-radius: 4px;
     border: none;
     margin-top: 18px;
-
     &:focus {
       outline: none;
       border: none;
@@ -233,6 +296,7 @@ footer input[type="email"],input[type="text"] {
   padding: 0 14px;
   display:block;
 }
+
 footer textarea {
   @include column(5);
   height: 200px;
@@ -245,6 +309,7 @@ footer textarea {
   @include push(1);
   float: right;
 }
+
 input[type="email"] {
     width: 100%;
     margin-top: 0;
@@ -273,5 +338,19 @@ input[type="submit"] {
   }
 }
 
-
-
+.copy {
+  display: block;
+  color: transparentize(white, .8);
+  text-align: center;
+  bottom: 10px;
+  position: absolute;
+  width: 100%;
+  a {
+    color: transparentize(white, .8);
+    @include transit(color, .2s, ease);
+    &:hover {
+      color: white;
+      @include transit(color,.2s,ease);
+    }
+  }
+}
