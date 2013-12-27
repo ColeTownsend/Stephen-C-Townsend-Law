@@ -1,0 +1,68 @@
+
+/* ==========================================================================
+   VARIABLES
+
+   - Breakpoints
+      - Desktop
+      - Tablet
+   - Type Scale
+   ========================================================================== */
+   
+
+/* Breakpoints
+   ========================================================================== */
+
+/**
+ *
+ * There are two breakpoints located in /_sass/_queries.scss
+ * One for tablets, and one for desktops. NKD is mobile first. 
+ * This sets the range for those breakpoints. 
+ * Queries are meant to be extended as needed.
+ *
+ */
+
+/* Desktop */
+$desktop-min-width: 1024px;
+
+/* Tablets */
+$tablet-max-width: 1024px;
+$tablet-min-width: 481px;
+
+/* Phones */
+$phone-max-width: 480px;
+
+
+/* Type Scale - I always need a type-scale
+   ========================================================================== */
+
+$font-size-1:64px;
+$font-size-2:48px;
+$font-size-3:32px;
+$font-size-4:24px; // The new black
+$font-size-5:16px;
+$font-size-6:12px; // Should only be used for text you want no one to read.
+
+$lh: 36px;
+
+/* Typography
+   ========================================================================== */
+
+$serif: "garamond-premier-pro", "Baskerville", serif;
+$sans: "proxima-nova","Helvetica Neue", "Helvetica", "Arial",sans-serif;
+$h-tag: "garamond-premier-pro-display", "Baskerville", sans-serif;
+
+/* Colors
+   ========================================================================== */
+
+$bg: #fdfbfa;
+$link: #283d77;
+$hover: lighten($link, 20%);
+$visited: darken($link, 10%);
+$accent: #4769c2;
+$off-black: #150712;
+
+
+/* Misc
+   ========================================================================== */
+
+$footerHeight: 300px;

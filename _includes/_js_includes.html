@@ -1,0 +1,17 @@
+<script src="{{ site.url }}/assets/js/headroom.min.js"></script> 
+<script src="{{ site.url }}/assets/js/menu.js"></script> 
+
+<script>
+(function() {
+    var header = new Headroom(document.querySelector("#nav"), {
+        tolerance: 5,
+        offset : 205,
+        classes: {
+          initial: "animated",
+          pinned: "slideDown",
+          unpinned: "slideUp"
+        }
+    });
+    header.init();
+}());
+</script>

@@ -1,0 +1,22 @@
+<footer>
+<section class="wrap">
+  <p>Thank you. Stephen will get back to you shortly</p>
+</section>
+</footer>
+
+<script>
+(function() {
+    var header = new Headroom(document.querySelector("#nav"), {
+        tolerance: 5,
+        offset : 205,
+        classes: {
+          initial: "animated",
+          pinned: "slideDown",
+          unpinned: "slideUp"
+        }
+    });
+    header.init();
+}());
+</script>
+
+{% include _js_includes.html %}

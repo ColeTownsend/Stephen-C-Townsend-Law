@@ -1,0 +1,12 @@
+
+<form action="http://getsimpleform.com/messages?form_api_token=6059694d45e5b6c6f11884073b4c5bb2" method="post">
+  <!-- the redirect_to is optional, the form will redirect to the referrer on submission -->
+  <input type="hidden" name="redirect_to" value='{{ site.url }}/thanks' />
+  <!-- all your input fields here.... -->
+  <textarea rows="3" name="message" type="text" placeholder="Message" required/> </textarea>
+  <div class="email-submit">
+    <input name="email" type="email" placeholder="Email" required/>
+    <input type="submit" value="Send"/>
+  </div>
+
+</form>

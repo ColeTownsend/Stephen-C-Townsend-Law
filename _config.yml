@@ -1,0 +1,41 @@
+title                             : Stephen Townsend PC
+tagline                           : Attorney at Law.
+description                       : Attorney at Law.
+#Comment out url when working locally to resolve base urls correctly
+url                               : http://stephen.twnsnd.co
+
+# Owner/author information
+owner                             : 
+name                              : Stephen Townsend
+avatar                            : avatar.png
+bio                               : "Attorney at Law"
+email                             : steve@stephentownsend.com
+  
+
+# Links to include in top navigation
+# For external links add external : true
+links                             : 
+- title                           : Email
+url                               : mailto:stephen@stephentownsend.con
+
+# http                            : //en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone                          : America/New_York
+future                            : true
+markdown                          : rdiscount
+
+# https                           : //github.com/mojombo/jekyll/wiki/Permalinks
+permalink                         : pretty
+
+include                           : [".htaccess"]
+exclude                           : ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp"]
+
+
+# FTP
+ftp_host                          : 'ftp.coletownsend.com'
+ftp_dir                           : '/home3/coletown/stephentownsend'
+ftp_passive                       : false
+
+# optional
+ftp_port                          : 21                  # default 21
+ftp_username                      : 'sct@coletownsend.com'     # default read from stdin
+ftp_password                      : 'Kinney1929' # default read from stdin

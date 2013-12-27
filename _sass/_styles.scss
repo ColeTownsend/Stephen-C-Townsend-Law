@@ -1,0 +1,277 @@
+/* ==========================================================================
+   SITE STYLES
+   ========================================================================== */
+
+/*
+        Basic Structure
+*/
+
+* { box-sizing: border-box }
+
+html, body {
+  background: $bg;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  font-family: $serif;
+}
+
+a {
+  text-decoration: none;
+  &:hover {
+    color: lighten($link, 10%);
+  }
+}
+
+.page-wrap {
+  width: 100%;
+  margin: 0;
+  height: auto!important;
+  @include clearfix();
+  margin-bottom: -$footerHeight;
+  &:after {
+    height: $footerHeight;
+  }
+}
+
+.push {
+  height: $footerHeight;
+}
+
+article {
+  @include column(8);
+  margin: 0 auto;
+  float: none;
+  display:block;
+  max-width: 760px;
+  min-height: 600px;
+  margin-bottom: 72px;
+  display: block;
+  @include clearfix();
+}
+
+.wrap {
+    max-width: 760px;
+    @include column(8);
+    display: block;
+    float: none;
+    margin: 0 auto;
+    @include clearfix;
+    overflow: hidden;
+}
+
+footer {
+  height: $footerHeight;
+  background: darken($bg, 5%);
+  display: block;
+}
+
+/*
+        Header
+*/
+
+header.site-header {
+  padding: 10px 0;
+  position: relative;
+  display: block;
+  width: 100%;
+  z-index: 5000;
+}
+
+
+header.site-header a.menu {
+  display: none;
+}
+
+header.site-header hgroup h1, header.site-header nav ul {
+  font-family: $sans;
+}
+
+header.site-header hgroup {
+  float: left;
+  @include clearfix();
+  h1 {
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 100%;
+      color: $accent;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+  }
+  a {
+      color: $link;
+      @include transit(all, .2s, ease);
+
+      &:hover {
+        @include transit(all, .2s, ease);
+      }
+  }
+}
+
+header.site-header nav {
+  float: right;
+  display: block;
+  @include clearfix;
+
+  ul {
+    margin: 10px 0;
+  }
+  
+  ul li {
+    font-size: 14px;
+    text-transform: uppercase;
+    display: inline;
+    font-weight: 600;
+    top: 0px;
+    position: relative;
+    margin-left: 20px; 
+    a {
+        color: $link;
+        @include transit(all, .2s, ease);
+        &:hover {
+            color: $hover;
+            @include transit(all, .2s, ease);
+        }
+    } 
+  }
+}
+
+
+/* 
+        Landing Page 
+*/
+
+.hero {
+  max-height: 700px;
+  height: 55vh;
+  min-height: 400px;
+  width: 100%;
+  position: relative;
+
+  // Background
+  background: url(https://i.cloudup.com/nLDSLJjPLH-1200x1200.jpeg) no-repeat center center fixed; 
+  -webkit-background-size : cover;
+  -moz-background-size    : cover;
+  -o-background-size      : cover;
+  background-size         : cover;
+
+  // Queries
+  @include breakpoint(tablet) {
+      height: 400px;    
+  }
+}
+
+.hero .vA {
+  position: relative;
+  max-height: 700px;
+  height: 55vh;
+  min-height: 400px;
+  display: table;
+  max-width: 760px;
+  width: 77%;
+  margin: 0 auto;
+  h3 {
+    display: table-cell;
+    vertical-align: middle;
+  }
+}
+
+.cta {
+  line-height: 1.4em;
+  color: $bg;
+
+  @include breakpoint(desktop) {
+    font-size: 48px;
+  }
+
+  @include breakpoint(phone) {
+    font-size: 24px;
+  }
+}
+
+.homepage p{
+  &:first-child {
+    margin-top: $lh*2;
+  }
+}
+
+/*
+Form
+*/
+
+footer {
+  padding-top: 50px;
+  font-family: $sans;
+  background: $visited;
+  h4 {
+    color: white ;
+  }
+  input, textarea {
+    font-size: $font-size-5;
+    letter-spacing: 1px;
+    border-radius: 4px;
+    border: none;
+    margin-top: 18px;
+
+    &:focus {
+      outline: none;
+      border: none;
+    }
+  }
+} 
+
+footer input[type="email"],input[type="text"] {
+  height: 36px;
+  padding: 0 14px;
+  display:block;
+}
+footer textarea {
+  @include column(5);
+  height: 200px;
+  resize: none;
+  padding: 16px;
+}
+
+.email-submit {
+  @include column(4);
+  @include push(1);
+  float: right;
+}
+input[type="email"] {
+    width: 100%;
+    margin-top: 0;
+}
+
+input[type="submit"] {
+  height: 38px;
+  padding: 16px;
+  width: 100%;
+  line-height: 0;
+  display: block;
+  background: $hover;
+  color: white;
+  -webkit-transition : .3s all ease-in-out;
+  -moz-transition    : .3s all ease-in-out;
+  -ms-transition     : .3s all ease-in-out;
+  -o-transition      : .3s all ease-in-out;
+  transition         : .3s all ease-in-out;
+  &:hover {
+    background: lighten($accent, 10%);
+    -webkit-transition : .4s all ease-in-out;
+    -moz-transition    : .4s all ease-in-out;
+    -ms-transition     : .4s all ease-in-out;
+    -o-transition      : .4s all ease-in-out;
+    transition         : .4s all ease-in-out;
+  }
+}
+
+
+
