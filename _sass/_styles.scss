@@ -267,17 +267,10 @@ footer {
   padding-top: 50px;
   font-family: $sans;
   background: $visited;
-  
-  // paragraph
   p {
-    font-size: $font-size-5;
+    font-size: $font-size-6;
     color: white;
   }
-  // h4 tag
-  h4 {
-    color: white ;
-  }
-
   // Inputs and Forms
   input, textarea {
     font-size: $font-size-5;
