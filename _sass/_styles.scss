@@ -54,7 +54,7 @@ small {
 }
 
 .push {
-  height: $footerHeight/2;
+  height: $footerHeight/3;
 }
 
 article {
@@ -129,6 +129,7 @@ header.site-header hgroup {
       color: $accent;
       letter-spacing: 2px;
       text-transform: uppercase;
+      line-height: 32px;
   }
   a {
       color: $link;
@@ -268,7 +269,7 @@ footer {
   font-family: $sans;
   background: $visited;
   p {
-    font-size: $font-size-6;
+    font-size: $font-size-5;
     color: white;
   }
   // Inputs and Forms

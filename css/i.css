@@ -560,7 +560,7 @@ small {
     height: 300px; }
 
 .push {
-  height: 150px; }
+  height: 100px; }
 
 article {
   display: inline;
@@ -656,7 +656,8 @@ header.site-header hgroup {
     line-height: 100%;
     color: #4769c2;
     letter-spacing: 2px;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    line-height: 32px; }
   header.site-header hgroup a {
     color: #283d77;
     -moz-transition: all 0.2s ease;
@@ -784,7 +785,7 @@ footer {
   font-family: "proxima-nova", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   background: #1b2951; }
   footer p {
-    font-size: 12px;
+    font-size: 16px;
     color: white; }
   footer input, footer textarea {
     font-size: 16px;
