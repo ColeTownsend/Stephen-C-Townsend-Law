@@ -48,7 +48,7 @@ $lh: 36px;
    ========================================================================== */
 
 $serif: "garamond-premier-pro", "Baskerville", serif;
-$sans: "proxima-nova","Helvetica Neue", "Helvetica", "Arial",sans-serif;
+$sans: "proxima-nova","Proxima Nova","Helvetica Neue", "Helvetica", "Arial",sans-serif;
 $h-tag: "garamond-premier-pro-display", "Baskerville", sans-serif;
 
 /* Colors
@@ -57,12 +57,11 @@ $h-tag: "garamond-premier-pro-display", "Baskerville", sans-serif;
 $bg: #fdfbfa;
 $link: #283d77;
 $hover: lighten($link, 20%);
-$visited: darken($link, 10%);
-$accent: #4769c2;
+$accent: darken($link, 15%);
 $off-black: #150712;
 
 
 /* Misc
    ========================================================================== */
 
-$footerHeight: 300px;
+$footerHeight: 420px;
