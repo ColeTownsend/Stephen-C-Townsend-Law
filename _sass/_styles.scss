@@ -126,7 +126,6 @@ header.site-header hgroup {
   float: left;
   @include clearfix();
   h1 {
-      font-weight: 600;
       font-size: 14px;
       line-height: 100%;
       letter-spacing: 2px;
@@ -157,7 +156,6 @@ header.site-header nav {
     font-size: 14px;
     text-transform: uppercase;
     display: inline;
-    font-weight: 600;
     top: 0px;
     position: relative;
     margin-left: 20px; 
@@ -249,7 +247,6 @@ header.site-header nav {
     letter-spacing: 1px;
     line-height: 2em;
     padding: 2em;
-    font-weight: 600;
     list-style-type: none;
     list-style: none;
     background: white;
@@ -284,7 +281,6 @@ footer {
   p {
     font-size: $font-size-5;
     color: white;
-    font-weight: 600;
   }
   // h4 tag
   h4 {
