@@ -650,7 +650,8 @@ header.site-header hgroup {
     zoom: 1; }
   header.site-header hgroup h1 {
     font-size: 14px;
-    line-height: 100%; }
+    line-height: 100%;
+    width: 182px; }
   header.site-header hgroup a {
     color: #150712;
     opacity: .3;
